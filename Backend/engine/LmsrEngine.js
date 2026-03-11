@@ -47,3 +47,4 @@ module.exports = {
     getSellReturn
 
 }
+// This file contains the implementation of the LMSR (Logarithmic Market Scoring Rule) algorithm, which is used to calculate the cost of buying and selling shares in a prediction market. The functions provided allow for calculating the total market cost, the current cost of a share, the cost to buy shares, the return from selling shares, and the total house loss.
