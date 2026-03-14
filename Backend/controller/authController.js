@@ -5,10 +5,6 @@ const jwt = require("jsonwebtoken")
 
 async function handleUserSignup(req, res) {
     const { email, password } = req.body
-
-
-
-
     try {
         const isInDatabase = await User.findOne({ email: email })
         if (!isInDatabase) {
