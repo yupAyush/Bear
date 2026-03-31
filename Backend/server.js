@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
 
 
 app.use("/users", authRouter)
-app.use("/markets", marketRouter)
+app.use("/market", marketRouter)
 
 
 
