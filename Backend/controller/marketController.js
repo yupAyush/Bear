@@ -1,6 +1,6 @@
-const Market = require('../models/Market');
+const Market = require('../models/marketModel');
 
-const createMarket = async (req, res) => {
+const createMarket = async(req, res) => {
     try {
         const market = await Market.create(req.body);
         res.status(201).json(market);
@@ -9,7 +9,7 @@ const createMarket = async (req, res) => {
     }
 };
 
-const getAllMarkets = async (req, res) => {
+const getAllMarkets = async(req, res) => {
     try {
         const markets = await Market.find();
         res.status(200).json(markets);
@@ -18,7 +18,7 @@ const getAllMarkets = async (req, res) => {
     }
 };
 
-const getMarketById = async (req, res) => {
+const getMarketById = async(req, res) => {
     try {
         const market = await Market.findById(req.params.id);
         if (!market) {
@@ -30,7 +30,7 @@ const getMarketById = async (req, res) => {
     }
 };
 
-const updateMarket = async (req, res) => {
+const updateMarket = async(req, res) => {
     try {
         const market = await Market.findByIdAndUpdate(req.params.id, req.body, { new: true });
         if (!market) {
@@ -42,7 +42,7 @@ const updateMarket = async (req, res) => {
     }
 };
 
-const deleteMarket = async (req, res) => {
+const deleteMarket = async(req, res) => {
     try {
         const market = await Market.findByIdAndDelete(req.params.id);
         if (!market) {
@@ -55,9 +55,9 @@ const deleteMarket = async (req, res) => {
 };
 
 module.exports = {
-    createMarket,//c
-    getAllMarkets,//r all
-    getMarketById,// r by id
-    updateMarket,//u
-    deleteMarket//d
+    createMarket, //c
+    getAllMarkets, //r all
+    getMarketById, // r by id
+    updateMarket, //u
+    deleteMarket //d
 };
